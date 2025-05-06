@@ -1,0 +1,137 @@
+<!-- productos.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laya - Productos</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Favicon -->
+  <link rel="icon" href="ICON.png" type="image/png">
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Meow+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Pantalla de introducción -->
+  <div class="intro-screen">
+    <img class="intro-logo" src="laya-beauty-logo.jpg" alt="Logo Laya Beauty">
+    <div class="loading-bar"></div>
+  </div>
+
+  <div class="hidden-content">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo"><a href="index.html#inicio"><h1>Laya Web</h1></a></div>
+      <nav class="dropdown">
+        <button class="dropdown-toggle" id="dropdown-toggle">Menú <span class="arrow">&#9662;</span></button>
+        <ul class="dropdown-menu" id="dropdown-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+          <li><a href="index.html#testimonios">Testimonios</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Sección de Productos -->
+    <main class="seccion productos-seccion">
+      <h2 class="seccion-titulo reveal">Nuestros Productos</h2>
+      <div class="categorias reveal">
+        <button onclick="toggleProductos('aretes')">Aretes</button>
+        <button onclick="toggleProductos('ganchos')">Ganchos</button>
+        <button onclick="toggleProductos('sombras')">Sombras</button>
+        <button onclick="toggleProductos('cremas')">Cremas</button>
+        <button onclick="toggleProductos('lapices')">Lápices</button>
+      </div>
+      <div class="contenedor-productos reveal">
+        <!-- Aretes -->
+        <div id="aretes" class="productos">
+          <article class="producto">
+            <div class="producto-img"><img src="Aretes.jpg" alt="Aretes elegantes"></div>
+            <div class="producto-info">
+              <h3>Aretes Elegantes</h3>
+              <p>Conjunto de aretes de diseño único, perfectos para cualquier ocasión.</p>
+              <p class="price">RD$ 1,200</p>
+            </div>
+          </article>
+        </div>
+        <!-- Ganchos -->
+        <div id="ganchos" class="productos">
+          <article class="producto">
+            <div class="producto-img"><img src="GanchoFlores.jpg" alt="Gancho de flores"></div>
+            <div class="producto-info">
+              <h3>Gancho de Flores</h3>
+              <p>Un toque floral para tu peinado, ligero y resistente.</p>
+              <p class="price">RD$ 800</p>
+            </div>
+          </article>
+        </div>
+        <!-- Sombras -->
+        <div id="sombras" class="productos">
+          <article class="producto">
+            <div class="producto-img"><img src="Sombras.jpg" alt="Sombras vibrantes"></div>
+            <div class="producto-info">
+              <h3>Sombras Vibrantes</h3>
+              <p>Paleta con tonos intensos de larga duración.</p>
+              <p class="price">RD$ 1,500</p>
+            </div>
+          </article>
+        </div>
+        <!-- Cremas -->
+        <div id="cremas" class="productos">
+          <article class="producto">
+            <div class="producto-img"><img src="DeboraSecret.jpg" alt="Crema Nutritiva"></div>
+            <div class="producto-info">
+              <h3>Debora Secret</h3>
+              <p>Crema nutritiva que hidrata profundamente la piel, dejándola suave y radiante.</p>
+              <p class="price">RD$ 900</p>
+            </div>
+          </article>
+        </div>
+        <!-- Lápices -->
+        <div id="lapices" class="productos">
+          <article class="producto">
+            <div class="producto-img"><img src="Lapices.jpg" alt="Lápices de precisión"></div>
+            <div class="producto-info">
+              <h3>Lápices de Precisión</h3>
+              <p>Delineadores con punta fina para trazos definidos.</p>
+              <p class="price">RD$ 700</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+    <br>
+    <br>
+    <br>
+
+    <!-- Footer fijo -->
+    <footer class="footer footer-fixed">
+      <p>&copy; 2025 Laya. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+
+  <!-- Sección de Contacto -->
+  <section id="contacto" class="contact-section">
+    <h2>Contáctanos</h2>
+    <form 
+      action="https://formspree.io/f/jhostinmoralesvargas83@gmail.com" 
+      method="POST" 
+      class="contact-form"
+    >
+      <input type="text" name="name" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo" required>
+      <textarea name="message" placeholder="Tu mensaje" required></textarea>
+
+      <!-- Redireccionar a una página de gracias (opcional) -->
+      <input type="hidden" name="_redirect" value="https://tusitio.com/gracias.html">
+
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

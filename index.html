@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laya - Inicio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Favicon -->
+  <link rel="icon" href="ICON.png" type="image/png">
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Meow+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Pantalla de introducción: se mostrará solo la primera vez de cada sesión -->
+  <div class="intro-screen">
+    <img class="intro-logo" src="laya-beauty-logo.jpg" alt="Logo Laya Beauty">
+    <!-- Barra de carga que se ubicará debajo del logo -->
+    <div class="loading-bar"></div>
+  </div>
+
+  <!-- Contenedor principal (oculto inicialmente) -->
+  <div class="hidden-content">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <a href="index.html#inicio">
+          <h1>Laya Web</h1>
+        </a>
+      </div>
+      <nav class="dropdown">
+        <button class="dropdown-toggle" id="dropdown-toggle">
+          Menú <span class="arrow">&#9662;</span>
+        </button>
+        <ul class="dropdown-menu" id="dropdown-menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+      <!-- Sección Hero -->
+      <section id="inicio" class="hero">
+        <div class="hero-content reveal">
+          <h2>Bienvenido a Laya</h2>
+          <p>Descubre la elegancia y autenticidad que transforma tu look.</p>
+          <a href="productos.html" class="btn">Ver Productos</a>
+        </div>
+      </section>
+
+      <!-- Sección de Testimonios -->
+      <section id="testimonios" class="seccion testimonios">
+        <h2 class="seccion-titulo reveal">Testimonios</h2>
+        <div class="testimonios-contenedor reveal-testimonios">
+          <div class="testimonial">
+            <p>"Los productos de Laya han transformado mi rutina diaria. Me siento empoderada y única."</p>
+            <h4>- María G.</h4>
+          </div>
+          <div class="testimonial">
+            <p>"Calidad, innovación y mucha pasión en cada detalle. ¡Recomiendo a todas mis amigas probarlos!"</p>
+            <h4>- Ana S.</h4>
+          </div>
+          <div class="testimonial">
+            <p>"Desde que uso Laya, mis looks son modernos y perfectos para cualquier ocasión."</p>
+            <h4>- Laura T.</h4>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de Contacto -->
+      <section id="contacto" class="seccion contacto">
+        <h2 class="seccion-titulo reveal">Contacto</h2>
+        <form class="contacto-formulario reveal">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tuemail@ejemplo.com" required>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Escribe un mensaje" required></textarea>
+          </div>
+          <button type="submit" class="btn">Enviar Mensaje</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 Laya. Todos los derechos reservados.</p>
+      <div class="sociales">
+        <a href="https://www.instagram.com/laya.beauty08/" target="_blank" class="social-link">
+          <img src="instagram.svg" alt="Instagram">
+          <span>Instagram</span>
+        </a>
+      </div>
+    </footer>
+  </div> <!-- Fin de .hidden-content -->
+
+  <script src="script.js"></script>
+</body>
+</html>
