@@ -398,6 +398,23 @@ body {
   padding: 1rem 0;
   justify-content: center;
 }
+
+/* —————————— Testimonios: asegurar primer slide visible en móvil —————————— */
+.testimonios-contenedor {
+  justify-content: flex-start;    /* que los items empiecen a la izquierda */
+  padding-left: 1rem;             /* espacio inicial desde el borde */
+  scroll-padding-left: 1rem;      /* para que el primer snap quede bien */
+}
+
+/* Si quieres solo en móviles: */
+@media (max-width: 768px) {
+  .testimonios-contenedor {
+    justify-content: flex-start;
+    padding-left: 1rem;
+    scroll-padding-left: 1rem;
+  }
+}
+
 .testimonial {
   flex: 0 0 300px;
   background: var(--card-bg);
@@ -575,6 +592,15 @@ body {
   z-index: 1000; /* Por encima de otros elementos */
 }
 
+/* Oculta sección de contacto solo en productos.html */
+.footer-fixed + .contact-section {
+  display: none !important;
+}
+
+.productos-page .contact-section {
+  display: none !important;
+}
+
 /* —————————— Scroll Reveal —————————— */
 .reveal {
   opacity: 0;
@@ -584,106 +610,4 @@ body {
 .reveal.visible {
   opacity: 1;
   transform: none;
-}
-
-/* —————————— Responsive —————————— */
-@media (max-width: 768px) {
-  .testimonios-contenedor {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-@media (max-width: 480px) {
-  .hero-content h2 { font-size: 2.5rem; }
-  .producto { width: 180px; }
-  .seccion-titulo { font-size: 2rem; }
-}
-@media (max-width: 360px) {
-  .hero-content h2 { font-size: 2rem; }
-  .producto { width: 150px; }
-  .seccion-titulo { font-size: 1.8rem; }
-}
-
-/* Excepciones para sombras y ganchos */
-#sombras .producto-img img {
-  transform: none; /* Elimina cualquier recorte */
-  object-position: center; /* Centra la imagen */
-}
-
-/* —————————— Responsive: tablet y móvil —————————— */
-
-/* Menú colapsado en pantallas pequeñas */
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
-  .dropdown-toggle {
-    width: 100%;
-    justify-content: space-between;
-  }
-  .dropdown-menu {
-    position: static;
-    width: 100%;
-    transform: none;
-    opacity: 1;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-  .dropdown-menu.show {
-    max-height: 500px; /* Ajusta según sea necesario */
-  }
-  .seccion-titulo {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  .nosotros-texto {
-    max-width: 100%;
-    padding: 0 1rem;
-  }
-}
-
-/* Móvil pequeño */
-@media (max-width: 480px) {
-  .header h1 {
-    font-size: 1.8rem;
-  }
-  .dropdown-toggle {
-    padding: 0.5rem 1rem;
-    font-size: 0.95rem;
-  }
-  .seccion-titulo {
-    font-size: 1.6rem;
-  }
-  .nosotros-texto p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-  .historia h3,
-  .mision h3,
-  .vision h3 {
-    font-size: 1.2rem;
-  }
-}
-
-/* Ajustes generales de fluidez */
-.nosotros-contenido {
-  display: flex;
-  justify-content: center;
-  padding: 2rem 1rem;
-}
-
-.nosotros-texto {
-  width: 100%;
-  max-width: 800px;
-  line-height: 1.6;
-}
-
-/* Asegurar que el footer no tape contenido en móvil */
-@media (max-width: 480px) {
-  .hidden-content {
-    padding-bottom: 120px;
-  }
 }
